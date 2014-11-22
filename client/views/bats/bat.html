@@ -1,0 +1,9 @@
+<template name="bat">
+  <a href="{{pathFor 'bats'}}">← Back</a>
+  {{#with bat}}
+    <div class="bats">
+      <h3>{{title}}</h3>
+      <p>{{body}}</p>
+    </div>
+  {{/with}}
+</template>

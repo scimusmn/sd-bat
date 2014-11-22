@@ -1,39 +1,39 @@
 /* ---------------------------------------------------- +/
 
-## Items ##
+## Bats ##
 
-All code related to the Items collection goes here. 
+All code related to the Bats collection goes here.
 
 /+ ---------------------------------------------------- */
 
-Items = new Meteor.Collection('items');
+Bats = new Meteor.Collection('bats');
 
 // Allow/Deny
 
-Items.allow({
+Bats.allow({
   insert: function(userId, doc){
-    return can.createItem(userId);
+    return can.createBat(userId);
   },
   update:  function(userId, doc, fieldNames, modifier){
-    return can.editItem(userId, doc);
+    return can.editBat(userId, doc);
   },
   remove:  function(userId, doc){
-    return can.removeItem(userId, doc);
+    return can.removeBat(userId, doc);
   }
 });
 
 // Methods
 
 Meteor.methods({
-  createItem: function(item){
-    if(can.createItem(Meteor.user()))
-      Items.insert(item);
+  createBat: function(bat){
+    if(can.createBat(Meteor.user()))
+      Bats.insert(bat);
   },
-  removeItem: function(item){
-    if(can.removeItem(Meteor.user(), item)){
-      Items.remove(item._id);
+  removeBat: function(bat){
+    if(can.removeBat(Meteor.user(), bat)){
+      Bats.remove(bat._id);
     }else{
-      throw new Meteor.Error(403, 'You do not have the rights to delete this item.')
+      throw new Meteor.Error(403, 'You do not have the rights to delete this bat.')
     }
   }
 });
