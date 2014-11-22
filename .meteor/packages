@@ -8,3 +8,7 @@ cmather:iron-router@0.7.1
 accounts-base
 accounts-password
 accounts-ui
+iron:router
+nemo64:bootstrap
+less
+
