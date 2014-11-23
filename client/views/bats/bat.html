@@ -2,8 +2,15 @@
   <a href="{{pathFor 'bats'}}">← Back</a>
   {{#with bat}}
     <div class="bats">
-      <h3>{{title}}</h3>
-      <p>{{body}}</p>
+      <h3>
+        {{name}}<br>
+        <span class="esp">{{nameEs}}</span><br>
+        <span class="latin">{{nameLatin}}</span>
+      </h3>
+      <div class="description">
+        {{{body}}}
+        <span class="es">{{{bodyEs}}}</span>
+      </div>
     </div>
   {{/with}}
 </template>
