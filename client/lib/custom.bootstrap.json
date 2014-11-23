@@ -1,13 +1,13 @@
 {"modules": {
   "normalize":            true,
-  "print":                false,
+  "print":                true,
 
   "scaffolding":          true,
   "type":                 true,
   "code":                 true,
   "grid":                 true,
   "tables":               true,
-  "forms":                false,
+  "forms":                true,
   "buttons":              true,
 
   "glyphicons":           false,
@@ -33,7 +33,7 @@
 
   "component-animations": false,
   "dropdowns":            false,
-  "modals":               false,
+  "modals":               true,
   "tooltip":              false,
   "popovers":             false,
   "carousel":             false,
@@ -46,6 +46,6 @@
   "tab":                  false,
   "transition":           false,
 
-  "utilities":            false,
+  "utilities":            true,
   "responsive-utilities": false
 }}
