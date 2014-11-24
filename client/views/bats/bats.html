@@ -1,23 +1,28 @@
 <template name="bats">
 
-  <h3>
-    Pick a bat to listen to its call.<br>
-    <span class="es">Escoja un bate para escuchar su llamada.</span>
-  </h3>
+  <div class="headline">
+    <h1>
+      Pick a bat to listen to its call.<br>
+      <span class="es">Escoja un bate para escuchar su llamada.</span>
+    </h1>
+  </div>
 
   <div class="intro">
-    <p>Scientists use special equipment to record bat calls our ears can’t detect.</p>
+    <p>Scientists use special equipment to record bat calls<br>our ears can’t detect.</p>
     <p>They call these sounds echolocation (ek-oh-loh-key-shun).</p>
   </div>
-  <div class="intro es">
-    <p>Los científicos utilizan un equipo especial para grabar bate llama nuestros oídos no pueden detectar.</p>
+  <div class="intro-es es">
+    <p>Los científicos utilizan un equipo especial para grabar<br>bate llama nuestros oídos no pueden detectar.</p>
     <p>Ellos llaman a estos sonidos de ecolocalización (ek-oh-loh-key-shun).</p>
   </div>
 
-  <ul>
     {{#each bats}}
-      <li><a href="{{pathFor "bat"}}">{{name}}</a></li>
+      <div class="btn-bat {{_id}}">
+        <img src="images/{{_id}}.png">
+        <div class="en">{{{name}}}</div>
+        <div class="es">{{{nameEs}}}</div>
+        <div class="latin">{{nameLatin}}</div>
+      </div>
     {{/each}}
-  </ul>
 
 </template>

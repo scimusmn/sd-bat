@@ -9,7 +9,7 @@ All publications-related code.
 // Publish all bats
 
 Meteor.publish('allBats', function() {
-  return Bats.find();
+  return Bats.find({}, {sort: {order: 1}});
 });
 
 // Publish a single bat

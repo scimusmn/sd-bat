@@ -26,25 +26,7 @@ body {
   max-width: @screen-width;
   height: @screen-height;
   padding: 0;
-  background: lighten(@background-tan, 10%);
-}
-
-/**
- * Used when loading content
- */
-#spinner {
-  height: 300px;
-}
-
-.not-found {
-  margin-top: 50px;
-  text-align: center;
-}
-
-.mouse-x,
-.mouse-y {
-  float: right;
-  margin: 10px;
+  background: @background-tan;
 }
 
 #screensaver {
@@ -64,122 +46,11 @@ body {
 
 /**
  * ----------------------------------------------------------------------------
- * Animations
- * ----------------------------------------------------------------------------
- */
-
-.page-animation {
-  -webkit-transition-duration: 400ms;
-          transition-duration: 400ms;
-  -webkit-transition-timing-function: linear;
-          transition-timing-function: linear;
-  /*transition-timing-function: cubic-bezier(1.000, 0.000, 0.000, 1.000);,*/
-  -webkit-transition-delay: 0ms;
-          transition-delay: 0ms;
-}
-
-.clickDown {
-  opacity: 100%;
-}
-
-@-webkit-keyframes clickDown {
-  100% {
-    opacity: 100%;
-    transform: scale3d(1, 1, 1);
-  }
-  20% {
-    opacity: 100%;
-    transform: scale3d(1, 1, 1);
-  }
-  10% {
-    opacity: 100%;
-    transform: scale3d(.99, .99, .99);
-    /*-webkit-filter: contrast(80%);*/
-    -webkit-box-shadow: inset 0 0 6px #000000;
-  }
-  0% {
-    opacity: 100%;
-  }
-}
-
-/*@keyframes clickDown {*/
-  /*0%, 50%, 100% {*/
-    /*opacity: 1;*/
-  /*}*/
-
-  /*25%, 75% {*/
-    /*opacity: 0;*/
-  /*}*/
-/*}*/
-
-.clickDown {
-  -webkit-animation-name: clickDown;
-  animation-name: clickDown;
-}
-
-
-/**
- * Zoom in big
- */
-@-webkit-keyframes zoomInBig {
-  0% {
-    opacity: 1;
-  }
-
-  100% {
-    opacity: 0;
-    -webkit-transform: scale3d(1.2, 1.2, 1.2);
-  }
-}
-
-.zoomInBig {
-  -webkit-animation-name: zoomInBig;
-}
-
-/**
- * fadeOutDownBigLeft
- */
-@-webkit-keyframes fadeOutDownBigLeft {
-  0% {
-    opacity: 1;
-  }
-
-  100% {
-    opacity: 0;
-    -webkit-transform: translate3d(-1000px, 2000px, 0);
-    transform: translate3d(-1000px, 2000px, 0);
-  }
-}
-
-@keyframes fadeOutDownBigLeft {
-  0% {
-    opacity: 1;
-  }
-
-  100% {
-    opacity: 0;
-    -webkit-transform: translate3d(-1000px, 2000px, 0);
-    -ms-transform: translate3d(-1000px, 2000px, 0);
-    transform: translate3d(-1000px, 2000px, 0);
-  }
-}
-
-.fadeOutDownBigLeft {
-  -webkit-animation-name: fadeOutDownBigLeft;
-  animation-name: fadeOutDownBigLeft;
-}
-
-/**
- * ----------------------------------------------------------------------------
  * Global text styles
  * ----------------------------------------------------------------------------
  */
 body {
-  // This is what they want for style and visibility.
-  // It just might be too much for the ammount of copy that they have
-  /*font-family: 'FuturaTS-Medium', sans-serif;*/
-  // This works better.
-  font-family: 'FuturaTS-Regular', sans-serif;
+  font-family: 'FuturaTS-Medium', sans-serif;
   font-size: @body-font-size;
   line-height: @body-line-height;
 }
@@ -189,102 +60,202 @@ h1, h2, h3 {
   margin-top: 0;
 }
 
+h1 {
+  font-size: 30px;
+  line-height: 36px;
+}
+
+.es {
+  color: darken(@golden-spanish, 40%);
+  font-size: 80%;
+}
+
 /**
  * ----------------------------------------------------------------------------
- * Home screen
+ * Homepage, select a bat
  * ----------------------------------------------------------------------------
  */
 
-/**
- * Home screen primary footer navigation
- */
-.menu-footer {
+.headline {
+  margin: 30px;
+}
+
+.intro,
+.intro-es {
+  float: left;
+  width: 50%;
+  padding: 0px 60px 30px 30px;
+}
+
+.intro+.es{
+  font-size: 90%;
+}
+
+.btn-bat {
+  float: left;
+  width: 20%;
+  height: 510px;
+  background: @change-brown;
+  border-right: 1px solid @background-tan;
+  border-left: 1px solid @background-tan;
+  overflow: hidden;
+  color: @background-tan;
+}
+
+.btn-bat div {
+  font-family: 'FuturaTS-Demibold', sans-serif;
+  letter-spacing: 1px;
+  position: relative;
+}
+
+.btn-bat .en {
+  padding: 5% 5% 0 5%;
+  font-size: 25px;
+  line-height: 28px;
+}
+
+.btn-bat .es {
+  padding: 1% 5% 0 5%;
+  color: darken(@change-brown, 30%);
+  font-size: 22px;
+  height: 116px;
+  line-height: 25px;
+}
+
+
+.latin {
+  font-family: 'FuturaTS-Regular', sans-serif;
+  font-style: italic;
+}
+
+.btn-bat .latin {
   position: absolute;
+  bottom: 20px;
+  padding-left: 14px;
   top: auto;
   left: auto;
-  right: 0;
-  bottom: 0;
-  width: 800px;
-  padding-left: 11px;
+  right: auto;
+  font-size: 18px;
 }
 
-.menu-footer .btn {
-  font-family: 'FuturaTS-Light', sans-serif;
-  float: left;
-  white-space: normal;
-  width: 263px;
-  height: 100px;
-  margin: 0;
-  padding: 20px 10px 10px 15px;
-  text-align: left;
-  font-size: @menu-font-size;
-  border: none;
-  border-radius:0;
-  -webkit-box-shadow: none;
-          box-shadow: none;
+.btn-bat img {
+  width: 100%;
 }
 
-.menu-footer .btn .esp {
-  color: lighten(@golden-spanish, 10%);
-  font-size: @menu-font-size-esp;
-  margin-top: 10px;
-  line-height: 47px;
-}
 /**
  * ----------------------------------------------------------------------------
- * Inner pages
+ * Individual bat screen
  * ----------------------------------------------------------------------------
  */
+.bat {
+  letter-spacing: 1px;
+}
 
-.body-copy {
+.bat .headline {
   position: absolute;
-  background: lighten(@background-tan, 6%);
+  top: 0;
+  left: 0;
+  margin: 0;
+  padding: 10px 30px 10px 30px;
+  overflow: hidden;
+  box-shadow: 2px 2px 20px @shadow-grey;
+  z-index: 1000;
+  background: @background-tan;
+}
+
+.bat .headline .en,
+.bat .headline .es {
+  float: left;
+  width: 50%;
+  padding-right: 100px;
+}
+
+.bat .headline .es h1 {
+  font-size: 29px;
+}
+
+
+.bat .headline .es h1 {
+  font-size: 26px;
+}
+
+.bat .headline .es p {
+  font-size: 20px;
+}
+
+.bat .info,
+.bat .audio {
+  display: block;
+  position: absolute;
+  top: 195px;
+}
+
+@info-width: 443px;
+@info-height: 300px;
+
+.bat .info {
+  left: 0;
+  width: @info-width;
+  background: @change-brown;
+  color: @background-tan;
+  z-index: 1;
+}
+
+.bat .info .names {
+  padding: 23px 30px 30px 30px;
+  font-size: 38px;
+  line-height: 40px;
+  height: 220px;
+}
+
+.bat .info .names .es {
+  margin-top: 5px;
+  color: darken(@change-brown, 30%);
+}
+
+.bat .info .names .latin {
+  margin-top: 7px;
+  font-size: 20px;
+}
+
+.bat img {
+  width: inherit;
+  height: @info-height;
+}
+
+.bat .audio {
+  left: @info-width;
+  width: (1366px-@info-width);
+}
+
+.bat .audio .bat-sound {
+  height: @info-height;
+  background: @background-tan;
+}
+
+.bat .audio .bat-sound-description div {
+  float: left;
+  width: 50%;
+  padding: 25px;
+}
+
+.bat .audio .bat-sound-description div.es {
+  letter-spacing: .9px;
+  font-size: 18px;
+}
+
+.btn-home {
+  border-top: 1px solid;
+  position: absolute;
+  width: 1366px;
+  height: 60px;
+  top: auto;
   bottom: 0;
   left: 0;
-  padding: 1em 1.5em 1.5em 1.5em;
-  height: 100%;
-  -webkit-box-shadow: 2px 2px 20px @shadow-grey;
-          box-shadow: 2px 2px 20px @shadow-grey;
-}
-
-.body-copy .image {
-  position: relative;
-  margin-bottom: 10px;
-}
-
-.body-copy img {
-  /*width: 470px;*/
-}
-
-.body-copy .credit {
-  top: 10px;
-  right: 15px;
-  position: absolute;
-  color: rgba(255, 255, 255, .5);
-  font-family: 'FuturaTS-Light', sans-serif;
-  font-size: 8px;
-  -webkit-transform: rotate(-90deg);
-  -webkit-transform-origin: 100% 0;
-}
-
-.body-copy .caption {
-  font-family: 'FuturaTS-Light', sans-serif;
-  font-size: 16px;
-  line-height: 19px;
-}
-
-.body-copy,
-.body-copy .btn-home {
-  width: 543px;
-}
-
-.btn-home,
-.btn-home:hover {
-  position: absolute;
-  bottom: 0px;
-  left: 0px;
-  font-size: 35px;
-  padding: 10px 0 10px 0;
-  color: lighten(@background-tan, 12%);
+  background: darken(@change-brown, 30%);
+  font-size: 40px;
   text-align: center;
+  padding: 10px;
+  color: @background-tan;
+  z-index: 2;
 }

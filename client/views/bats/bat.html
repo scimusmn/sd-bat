@@ -1,16 +1,36 @@
 <template name="bat">
-  <a href="{{pathFor 'bats'}}">← Back</a>
   {{#with bat}}
-    <div class="bats">
-      <h3>
-        {{name}}<br>
-        <span class="esp">{{nameEs}}</span><br>
-        <span class="latin">{{nameLatin}}</span>
-      </h3>
-      <div class="description">
-        {{{body}}}
-        <span class="es">{{{bodyEs}}}</span>
+    <div class="bat">
+      <div class="headline">
+        <div class="en">
+          <h1>Each bat species has a unique call, but the differences can be hard to hear.</h1>
+          <p>Looking at visual graphs of bat calls helps scientists tell them apart.</p>
+        </div>
+        <div class="es">
+          <h1>Cada especie de murciélago tiene una llamada única, pero las diferencias pueden ser difícil de escuchar.</h1>
+          <p>En cuanto a los gráficos visuales de llamadas de murciélagos ayuda a los científicos les dicen aparte .</p>
+        </div>
+      </div>
+      <div class="info">
+        <img src="/images/{{_id}}-ind.png">
+        <div class="names">
+          <div class="en">{{name}}</div>
+          <div class="es">{{nameEs}}</div>
+          <div class="latin">{{nameLatin}}</div>
+        </div>
+      </div>
+      <div class="audio">
+        <div class="bat-sound">
+          &nbsp;
+        </div>
+        <div class="bat-sound-description">
+          <div class="en">{{{body}}}</div>
+          <div class="es">{{{bodyEs}}}</div>
+        </div>
       </div>
     </div>
   {{/with}}
+  <div class="btn-home">
+    <span class="glyphicon glyphicon-home"></span>
+  </div>
 </template>

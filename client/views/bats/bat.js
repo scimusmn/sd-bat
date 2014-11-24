@@ -24,13 +24,10 @@ Template.bat.rendered = function () {
 
 Template.bat.events({
 
-  'click .delete': function(e, instance){
-    var bat = this;
-    e.preventDefault();
-    Meteor.call('removeBat', bat, function(error, result){
-      alert('bat deleted.');
-      Router.go('/bats');
-    });
-  }
+    'click .btn-home': function(e) {
+
+        e.preventDefault();
+        Router.go('/bats');
+    }
 
 });
