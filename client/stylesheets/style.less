@@ -187,25 +187,27 @@ h1 {
 .bat .audio {
   display: block;
   position: absolute;
-  top: 195px;
+  top: 198px;
 }
 
-@info-width: 443px;
+@info-width: 500px;
 @info-height: 300px;
 
 .bat .info {
   left: 0;
   width: @info-width;
-  background: @change-brown;
-  color: @background-tan;
-  z-index: 1;
+  z-index: 2;
+  background: @background-tan;
+  height: 510px;
 }
 
 .bat .info .names {
-  padding: 23px 30px 30px 30px;
+  padding: 23px 30px 20px 30px;
   font-size: 38px;
   line-height: 40px;
-  height: 220px;
+  /*height: 220px;*/
+  background: @change-brown;
+  color: @background-tan;
 }
 
 .bat .info .names .es {
@@ -220,12 +222,17 @@ h1 {
 
 .bat img {
   width: inherit;
-  height: @info-height;
+  height: 510px;
+  left: -50px;
+  position: absolute;
 }
 
 .bat .audio {
+  background: #000;
   left: @info-width;
   width: (1366px-@info-width);
+  height: 510px;
+  z-index: 1;
 }
 
 .bat .audio .bat-sound {
@@ -233,15 +240,17 @@ h1 {
   background: @background-tan;
 }
 
-.bat .audio .bat-sound-description div {
-  float: left;
-  width: 50%;
-  padding: 25px;
+.bat-sound-description {
 }
 
-.bat .audio .bat-sound-description div.es {
+.bat-sound-description div {
+  padding: 25px 10px 25px 25px;
+}
+
+.bat-sound-description div.es {
   letter-spacing: .9px;
   font-size: 18px;
+  padding-top: 0;
 }
 
 .btn-home {

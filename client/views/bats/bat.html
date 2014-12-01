@@ -12,21 +12,20 @@
         </div>
       </div>
       <div class="info">
-        <img src="/images/{{_id}}-ind.png">
         <div class="names">
-          <div class="en">{{name}}</div>
+          <div class="en">{{{name}}}</div>
           <div class="es">{{nameEs}}</div>
           <div class="latin">{{nameLatin}}</div>
-        </div>
-      </div>
-      <div class="audio">
-        <div class="bat-sound">
-          &nbsp;
         </div>
         <div class="bat-sound-description">
           <div class="en">{{{body}}}</div>
           <div class="es">{{{bodyEs}}}</div>
         </div>
+      </div>
+      <div class="audio">
+      <video id="bat-video" width="866" height="510" autoplay loop>
+        <source src="/video/{{_id}}.mp4" type="video/mp4">
+      </video>
       </div>
     </div>
   {{/with}}
