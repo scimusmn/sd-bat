@@ -22,6 +22,7 @@ Router.map(function() {
     // Bats
 
     this.route('bats', {
+        path: '/',
         waitOn: function () {
             return Meteor.subscribe('allBats');
         },
@@ -42,13 +43,6 @@ Router.map(function() {
                 bat: Bats.findOne(this.params._id)
             };
         }
-    });
-
-
-    // Pages
-
-    this.route('homepage', {
-        path: '/'
     });
 
     this.route('content');
