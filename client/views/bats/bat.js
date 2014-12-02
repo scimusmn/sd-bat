@@ -25,7 +25,6 @@ Template.bat.rendered = function () {
 Template.bat.events({
 
     'click .btn-home': function(e) {
-
         e.preventDefault();
         Router.go('/');
     }

@@ -28,7 +28,7 @@ Router.map(function() {
         },
         data: function () {
             return {
-                bats: Bats.find()
+                bats: Bats.find({}, {sort: {order: 1}})
             };
         }
     });
