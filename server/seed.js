@@ -13,7 +13,7 @@ if (Bats.find().count() === 0) {
     _id: 'townsend-big-ear',
     order: 5,
     name: "Townsend's<br>Big-eared Bat",
-    nameEs: "Murciélago orejón de Townsend",
+    nameEs: "Murciélago orejón<br>de Townsend",
     nameLatin: "Corynorhinus townsendii",
     body: "<p>Watch the graph as this speedy call starts, then ends abruptly in a few slower thuds.</p>",
     bodyEs: "<p>Mira el gráfico al empezar esta veloz llamada, que luego cesa abruptamente en unos pocos golpes sordos más lentos.</p>"
@@ -26,14 +26,14 @@ if (Bats.find().count() === 0) {
     nameEs: "Miotis de Yuma",
     nameLatin: "Myotis yumanensis",
     body: "<p>Follow along on the graph as this high, rapid call comes to a halt, then starts back up.</p>",
-    bodyEs: "<p>Sigue el gráfico mientras se desarrolla para ver cómo esta aguda y veloz llamada se detiene abruptamente, y luego comienza otra vez.</p>"
+    bodyEs: "<p>Sigue el gráfico mientras se desarrolla para ver cómo esta aguda y veloz llamada se detiene abruptamente,<br>y luego comienza otra vez.</p>"
   });
 
   Bats.insert({
     _id: 'mexican-free-tailed',
     order: 4,
     name: "Mexican<br>Free-tailed Bat",
-    nameEs: "Murciélago cola-suelta brasileño",
+    nameEs: "Murciélago<br>cola-suelta brasileño",
     nameLatin: "Tadarida brasiliensis",
     body: "<p>See if you can pick out spots on the graph where the short chirps of this call get faster and louder.</p>",
     bodyEs: "<p>Fíjate a ver si puedes detectar los puntos en el gráfico donde los breves chirridos de esta llamada aumentan en velocidad y volumen.</p> ",
@@ -43,7 +43,7 @@ if (Bats.find().count() === 0) {
     _id: 'canyon-bat',
     order: 2,
     name: "Canyon Bat",
-    nameEs: "Pipistrelo del oeste americano",
+    nameEs: "Pipistrelo del<br>oeste americano",
     nameLatin: "Parastrellus hesperus",
     body: "<p>Find the one place on the graph where this rapid call stops before racing along again.</p>",
     bodyEs: "<p>Encuentra el punto en el gráfico donde esta rápida llamada se detiene antes de comenzar velozmente otra vez.</p>",
