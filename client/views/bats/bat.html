@@ -1,14 +1,6 @@
 <template name="bat">
   {{#with bat}}
     <div class="bat">
-      <div class="headline inner">
-        <div class="en">
-          <h1>Looking at visual graphs of bat calls helps scientists<br>tell them apart.</h1>
-        </div>
-        <div class="es">
-          <h1>Observar gráficos de llamadas de murciélagos les ayuda a los científicos a distinguirlos.</h1>
-        </div>
-      </div>
       <div class="info">
         <div class="names">
           <div class="en">{{{name}}}</div>
@@ -21,9 +13,17 @@
         </div>
       </div>
       <div class="audio">
-      <video id="bat-video" width="866" height="510" autoplay loop>
+      <video id="bat-video" width="866" height="510">
         <source src="/video/{{_id}}.mp4" type="video/mp4">
       </video>
+      </div>
+      <div class="headline inner">
+        <div class="en">
+          <h1>Looking at visual graphs of bat calls helps scientists tell them apart.</h1>
+        </div>
+        <div class="es">
+          <h1>Observar gráficos de llamadas de murciélagos les ayuda a los científicos a distinguirlos.</h1>
+        </div>
       </div>
     </div>
   {{/with}}

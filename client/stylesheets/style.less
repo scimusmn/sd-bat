@@ -171,8 +171,9 @@ h1 {
 
 .bat .headline {
   position: absolute;
-  top: 0;
+  top: auto;
   left: 0;
+  bottom: 60px;
   margin: 0;
   padding: 10px 30px 10px 30px;
   overflow: hidden;
@@ -201,9 +202,16 @@ h1 {
   font-size: 28px;
 }
 
+.bat .headline.inner {
+  background: darken(@background-tan, 10%);
+  padding: 30px 30px 20px 30px;
+}
+
+.bat .headline.inner  h1,
 .bat .headline.inner .es h1 {
-  font-size: 34px;
-  line-height: 38px;
+  font-size: 24px;
+  line-height: 24px;
+  font-family: 'FuturaTS-Medium', sans-serif;
 }
 
 .bat .headline.inner .es p {
@@ -214,7 +222,7 @@ h1 {
 .bat .audio {
   display: block;
   position: absolute;
-  top: 144px;
+  top: 0px;
 }
 
 @info-width: 450px;
