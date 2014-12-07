@@ -22,7 +22,7 @@ Router.map(function() {
     // Bats
 
     this.route('bats', {
-        path: '/',
+        path: '/bats',
         waitOn: function () {
             return Meteor.subscribe('allBats');
         },
