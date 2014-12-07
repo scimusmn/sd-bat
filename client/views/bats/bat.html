@@ -1,6 +1,6 @@
 <template name="bat">
   {{#with bat}}
-    <div class="bat">
+  <div class="bat {{_id}}">
       <div class="info">
         <div class="names">
           <div class="en">{{{name}}}</div>
@@ -19,12 +19,16 @@
       </div>
       <div class="headline inner">
         <div class="en">
-          <h1>Looking at visual graphs of bat calls helps scientists tell them apart.</h1>
+          <h1>Looking at visual graphs of bat calls<br>helps scientists tell them apart.</h1>
         </div>
         <div class="es">
           <h1>Observar gráficos de llamadas de murciélagos les ayuda a los científicos a distinguirlos.</h1>
         </div>
       </div>
+    </div>
+    <div class="video-control">
+      <div class="pause"><span class="glyphicon glyphicon-pause"></span></div>
+      <div class="play disabled"><span class="glyphicon glyphicon-play"></span></div>
     </div>
   {{/with}}
   <div class="btn-home">
