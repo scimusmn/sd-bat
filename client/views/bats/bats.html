@@ -9,6 +9,7 @@
     <p>Cada especie de murciélago tiene su llamada particular que nuestros oídos generalmente no pueden detectar. Los científicos usan equipos especiales para grabar, escuchar e identificar a los murciélagos por estas llamadas.</p>
   </div>
 
+  <div class="bat-btns">
     {{#each bats}}
       <div class="btn-bat {{_id}}">
         <img src="images/{{_id}}.png">
@@ -17,5 +18,6 @@
         <div class="latin">{{nameLatin}}</div>
       </div>
     {{/each}}
+  </div>
 
 </template>
