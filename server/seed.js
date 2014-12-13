@@ -15,7 +15,7 @@ if (Bats.find().count() === 0) {
     name: "Townsend's<br>Big-eared Bat",
     nameEs: "Murciélago orejón<br>de Townsend",
     nameLatin: "Corynorhinus townsendii",
-    body: "<p>Watch the graph as this speedy call starts, then ends abruptly in a<br>few slower thuds.</p>",
+    body: "<p>Watch the graph as this speedy call starts, then ends abruptly in a few slower thuds.</p>",
     bodyEs: "<p>Mira el gráfico al empezar esta veloz llamada, que luego cesa abruptamente en unos pocos golpes sordos más lentos.</p>"
 });
 
@@ -36,7 +36,7 @@ if (Bats.find().count() === 0) {
     nameEs: "Murciélago cola-<br>suelta brasileño",
     nameLatin: "Tadarida brasiliensis",
     body: "<p>See if you can pick out spots on the graph where the short chirps of this call get faster and louder.</p>",
-    bodyEs: "<p>Fíjate a ver si puedes detectar los puntos en el gráfico donde los breves chirridos de esta llamada aumentan en<br>velocidad y volumen.</p> ",
+    bodyEs: "<p>Fíjate a ver si puedes detectar los puntos en el gráfico donde los breves chirridos de esta llamada aumentan en velocidad<br>y volumen.</p> ",
   });
 
   Bats.insert({
@@ -53,10 +53,10 @@ if (Bats.find().count() === 0) {
     _id: 'western-mastiff',
     order: 3,
     name: "Western Mastiff Bat",
-    nameEs: "Murciélago-<br>con bonete mayor",
+    nameEs: "Murciélago<br>con bonete mayor",
     nameLatin: "Eumops perotis",
-    body: "<p>One of the few bats with a call slow and low enough for people to hear without special equipment. Watch it progress on the graph from<br>low to high.</p>",
-    bodyEs: "<p>Uno de los pocos murciélagos con una llamada lenta y lo suficientemente baja en frecuencia para que las personas la oigan sin equipos especiales. Mira cómo se desarrolla en el gráfico de<br>grave a agudo.</p> ",
+    body: "<p>One of the few bats with a call slow and low enough for people to hear without special equipment. Watch<br>it progress on the graph from low<br>to high.</p>",
+    bodyEs: "<p>Uno de los pocos murciélagos con una llamada lenta y lo suficientemente baja en frecuencia para que las personas la oigan sin equipos especiales. Mira cómo se desarrolla en el gráfico de gravea<br>agudo.</p> ",
   });
 
 }
