@@ -56,7 +56,7 @@ if (Bats.find().count() === 0) {
     nameEs: "Murciélago<br>con bonete mayor",
     nameLatin: "Eumops perotis",
     body: "<p>One of the few bats with a call slow and low enough for people to hear without special equipment. Watch<br>it progress on the graph from low<br>to high.</p>",
-    bodyEs: "<p>Uno de los pocos murciélagos con una llamada lenta y lo suficientemente baja en frecuencia para que las personas la oigan sin equipos especiales. Mira cómo se desarrolla en el gráfico de gravea<br>agudo.</p> ",
+    bodyEs: "<p>Uno de los pocos murciélagos con una llamada lenta y lo suficientemente baja en frecuencia para que las personas la oigan sin equipos especiales. Mira cómo se desarrolla en el gráfico de grave a<br>agudo.</p> ",
   });
 
 }
